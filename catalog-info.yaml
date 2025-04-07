@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: qua-azure-git-test-gitops
+  description: This is GitOps manifest for qua-azure-git-test   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=qua-azure-git-test
+    backstage.io/kubernetes-id: qua-azure-git-test 
+    backstage.io/techdocs-ref: dir:.
+    dev.azure.com/project-repo: prietyc123-qe-org/qua-azure-git-test-gitops
+    dev.azure.com/project: shared-public
+    dev.azure.com/build-definition: prietyc123-qe-org.qua-azure-git-test-gitops
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:qua-azure-git-test
