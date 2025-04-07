@@ -12,5 +12,5 @@ spec:
   template:
     spec:
       containers:
-        - image: quay.io/rhtap_qe/private_repo:azure-9e49daf2642a1fe6cfa7946f78fcd0becd65b094
+        - image: quay.io/rhtap_qe/private_repo:azure-ae1f1780d106f81acee1fcccf6439b5ffa1a2745
           name: container-image
